@@ -1,2 +1,0 @@
-RewriteBase /
-RewriteRule (.*)\.html$ $1 [R=301,L]

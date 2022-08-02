@@ -185,15 +185,23 @@
 .s4_buttons
   margin-top: 4rem
   display: flex
-  flex-direction: column
+  flex-wrap: wrap
+  margin-bottom: 4rem
   gap: 2rem
+  max-width: 90ch
   .button
     line-height: 1.6
     margin-bottom: 0
-  @media (max-width: $breakpoint-max-lg)
-    flex-direction: row
-    margin-bottom: 4rem
-    flex-wrap: wrap
+    white-space: normal
+    flex-grow: 1
+@media (max-width: $breakpoint-min-xxl)
+  .s4_buttons
+    .button
+      padding-left: 3rem
+      padding-right: 3rem
+
+
+
 .s4_items__wrapper
   position: relative
   overflow: hidden
