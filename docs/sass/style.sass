@@ -1,0 +1,316 @@
+@use 'abstracts' as *
+@use 'base' as *
+@use 'utilities' as *
+@use 'components' as *
+@use 'layout' as *
+
+.s1__decoration
+  margin-top: 8em
+  height: 26em
+  width: 100%
+  background-image: url(../img/clouds1st.png), url(../img/bg-1.png)
+  background-position: 50% 0%, 50% 100%
+  background-repeat: repeat-x, repeat-x
+  background-size: 192em auto, 192em auto
+  @media (max-width: 1199px)
+    margin-top: 2em
+    font-size: calc(0.45px + 0.796vw )
+  @media (max-width: 575px)
+    margin-top: 0em
+
+.section_1
+  padding-top: 12rem
+  padding-bottom: 0
+  background: url(../img/bg_s1.png) center -7rem no-repeat
+  background-size: 1920px auto
+.s1_headers
+  display: grid
+  place-items: center
+  gap: 2rem
+  max-width: 130rem
+  margin: auto
+.s1_main
+  margin-top: 8rem
+.s1_countriesItems
+  max-width: 133rem
+  margin: 4rem auto 0
+  display: flex
+  gap: 3rem 2rem
+  justify-content: center
+  @media (max-width: $breakpoint-max-xl)
+    flex-wrap: wrap
+.s1_countryItem
+  position: relative
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  @media (max-width: $breakpoint-max-xl)
+    flex: 0 1 15rem
+  img
+    min-width: 6.1rem
+    max-width: 6.1rem
+    min-height: 6.1rem
+    max-height: 6.1rem
+    border-radius: 2rem
+    border: 3px solid $accent_mid
+    margin-bottom: 1rem
+  .link_on_element
+    &:hover, &:focus
+      &+img
+        border-radius: 50%
+        border: 3px solid $accent
+        &+span
+          color: $accent
+
+.s1_items
+  display: flex
+  gap: 3rem 6rem
+  justify-content: center
+  flex-wrap: wrap
+  margin: 12rem auto 0
+  max-width: 133rem
+  @media (max-width: $breakpoint-max-extra)
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-gap: 2rem
+    max-width: 80rem
+  @media (max-width: $breakpoint-max-md)
+    grid-template-columns: 1fr
+    padding-left: 6rem
+.s1_item
+  display: flex
+  align-items: center
+  @media (max-width: $breakpoint-max-extra)
+
+
+@media (max-height: 900px)
+  .section_1
+    padding-top: 8rem
+  .s1_main, .s1_items, .s1__decoration
+    margin-top: 6rem
+
+@media (max-width: $breakpoint-max-xl)
+  .section_1
+    padding-top: 8rem
+  .s1_main, .s1_items, .s1__decoration
+    margin-top: 6rem
+
+
+.section_2
+  padding-top: 4rem
+  padding-bottom: 0
+.s2_headers
+  margin-bottom: 2rem
+.s2_items
+  display: grid
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr))
+  grid-gap: 2rem
+  padding-bottom: 2rem
+.s2_item
+  display: flex
+  align-items: center
+  .main>*
+    line-height: 1.1
+    margin: .5rem 0
+.s2_row
+  align-items: center
+
+.section_3
+  padding: 4rem 0 0
+  background: url(../img/bg_u1.png) center 1rem no-repeat
+  background-size: 1920px auto
+.s3_header
+  margin-bottom: 4rem
+.s3_items
+  display: grid
+  grid-template-columns: repeat(auto-fit, minmax(30rem,1fr))
+  grid-gap: 4rem
+  @media (max-width: $breakpoint-max-xl)
+    grid-template-columns: repeat(auto-fit, minmax(26rem,1fr))
+    grid-gap: 2rem
+.s3_item
+  border-radius: 1.5rem
+  border: 1px solid $accent
+  overflow: hidden
+  header
+    div
+      width: 100%
+      position: relative
+      padding-top: 56%
+      overflow: hidden
+    img
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      position: absolute
+      min-width: 100%
+      min-height: 100%
+      width: unset
+      height: unset
+  main
+    background: linear-gradient(to bottom, #E9F5FC 0%, rgba(#E9F5FC, 0) 100%)
+    padding: 2rem 4rem 4rem
+    min-height: 27rem
+    display: flex
+    flex-direction: column
+  .title
+    margin-bottom: 1rem
+  .price
+    margin-top: auto
+    margin-bottom: 2rem
+    *+*
+      margin-left: 2rem
+  @media (min-width: $breakpoint-min-lg) and (max-width: $breakpoint-max-xl)
+    main
+      padding: 2rem
+  @media (max-width: $breakpoint-max-lg)
+    min-height: 28rem
+    .price
+      margin-bottom: 1rem
+  @media (max-width: $breakpoint-max-md)
+    header div
+      padding-top: 40%
+    main
+      min-height: unset
+      padding-bottom: 4rem
+
+.section_4
+  padding-top: 22rem
+  background: url(../img/bg_u2.png) center -2rem no-repeat
+  background-size: 1920px auto
+.s4_headers__title
+  margin-bottom: 2rem
+.s4_buttons
+  margin-top: 4rem
+  display: flex
+  flex-direction: column
+  gap: 2rem
+  .button
+    line-height: 1.6
+    margin-bottom: 0
+  @media (max-width: $breakpoint-max-lg)
+    flex-direction: row
+    margin-bottom: 4rem
+    flex-wrap: wrap
+.s4_items__wrapper
+  position: relative
+  overflow: hidden
+  @media (max-width: $breakpoint-max-lg)
+.s4_items
+  width: 1000%
+  position: relative
+  display: flex
+.s4_item
+  width: 10%
+  opacity: 0
+  &.active
+    opacity: 1
+
+.s4_item__wallpaper
+  position: relative
+  margin-bottom: 4rem
+  display: flex
+  align-items: center
+  min-height: 17rem
+  padding-left: 4rem
+  border-radius: 1.5rem
+  overflow: hidden
+  img
+    position: absolute
+    top: 0
+    left: 0
+    max-height: unset
+    max-width: unset
+    min-width: 100%
+    min-height: 100%
+    width: 100%
+
+.s4_item__wallpaper__title
+  position: relative
+  z-index: 1
+.s4_item__list
+  display: grid
+  grid-template-columns: repeat(auto-fit, minmax(27rem,1fr))
+  grid-gap: 2rem 4rem
+  li
+    display: flex
+    align-items: center
+
+.section_5
+  padding-top: 14rem
+  &::after
+    display: block
+    position: absolute
+    top: -2rem
+    left: 50%
+    width: 192rem
+    height: auto
+    transform: translateX(-50%)
+    content: url(../img/bg_u3.png)
+.s5_items
+  width: 100%
+  display: grid
+  grid-template-columns: repeat(auto-fit, minmax(20rem,1fr))
+  grid-gap: 4rem 2rem
+.s5_item
+
+.section_12
+  padding-top: 9rem
+  padding-bottom: 6rem
+.s12_headers
+  &>*
+    max-width: 46rem
+.s12_items
+  display: grid
+  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr))
+  grid-auto-rows: 1fr
+  grid-gap: 5rem 4rem
+  padding-top: 4rem
+
+
+.section_13
+  padding-top: 16rem
+  padding-bottom: 0
+  &::after
+    display: block
+    position: absolute
+    top: 0rem
+    left: 50%
+    width: 192rem
+    height: auto
+    transform: translateX(-50%)
+    content: url(../img/bg_u4.png)
+.s13_items
+  display: grid
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr))
+  grid-gap: 2rem
+.s13_item
+  display: flex
+  align-items: center
+  .main>*
+    line-height: 1.1
+    margin: .5rem 0
+.s13_map
+  position: relative
+  padding-top: 40%
+  margin-top: 4rem
+  border-radius: 2rem
+  overflow: hidden
+  iframe
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+@media (max-width: $breakpoint-max-xl)
+  .section_4, .section_5, .section_13
+    padding-top: 10rem
+  .section_12
+    padding-top: 6rem
+@media (max-width: $breakpoint-max-md)
+  .section_4, .section_5, .section_13
+    padding-top: 5rem
+  .section_12
+    padding-top: 2rem
