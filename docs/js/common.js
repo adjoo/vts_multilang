@@ -132,11 +132,13 @@ $(document).ready(async function () {
             i.classList.remove('active');
             if ( valueRadio === i.dataset.tag){
                 i.classList.add('active')
-                $('#verticalCarousel').jcarousel('scroll', +valueRadio);
+                $('#aboutUsCarousel').jcarousel('scroll', +valueRadio);
             }
         })
     }))
-    $('#verticalCarousel').jcarousel({});
+    $('#aboutUsCarousel').jcarousel({});
+
+
 
 })
 
