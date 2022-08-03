@@ -138,6 +138,9 @@ $(document).ready(async function () {
     }))
     $('#verticalCarousel').jcarousel({});
 
+    console.log(' '.charCodeAt(0))
+    console.log(' '.charCodeAt(0))
+
 })
 
 
